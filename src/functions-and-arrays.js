@@ -122,7 +122,7 @@ function averageWordLength(array) {
 }
 console.log(`average word length is: ${averageWordLength(wordsArr)}`)
 
-
+console.clear();
 // Iteration #5: Unique arrays
 const wordsUnique = [
   'crab',
@@ -137,6 +137,42 @@ const wordsUnique = [
   'simple',
   'bring'
 ];
+
+function uniquifyArray(array){
+if (array != '') {
+  let newArray = [];
+  //let repeatFlag = 0;
+  array.forEach(function (word) {
+    /*newArray.forEach(function (newWord) {
+      if (word == newWord) {
+         repeatFlag = 1;
+       
+      } else {
+        console.log("notinloop");
+      }
+    })
+    if (repeatFlag==0) {
+       newArray.push(word);
+        console.log("word", newArray);
+
+      }*/
+    if (newArray.indexOf(word) == -1) {
+      newArray.push(word);
+      console.log('Not a repeated word', word);
+    } else {
+      console.log("index is -1? It should be", newArray.indexOf(word))
+      console.log('Found the repeated word', word);
+    }
+    
+  })
+  
+  
+  return newArray;
+} else { return null;}
+} 
+console.log(`Unique word array :${uniquifyArray(wordsUnique)}`);
+
+ 
 
 // Iteration #6: Find elements
 const wordsFind = ['machine', 'subset', 'trouble', 'starting', 'matter', 'eating', 'truth', 'disobedience'];

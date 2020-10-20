@@ -53,13 +53,75 @@ function sumNumbers(array) {
   return sum;
 }
 console.log(sumNumbers(numbers));
+console.clear();
+
+
+
+const mixedArr = [6, 12, 'miami', 1, true, 'barca', '200', 'lisboa', 8, 10];
+
+function sum(array){
+  let sum = 0;
+  array.forEach(function (element) {
+
+    if (typeof element === 'number') {
+      sum += element;
+    //  console.log("is a number");
+    } else if (element === false || element === null) {
+      element = 0;
+    
+    } else if (element === true) {
+      sum += 1;
+    }
+    else if (typeof element === 'string') {
+      sum += element.length;
+     // console.log("is a string");
+    }
+  //  console.log(`Sum: ${sum} and element:${element}`);
+  })
+  return sum;
+  
+}
+
+console.log('Total sum is', sum(mixedArr));
+console.clear
+
+
 
 // Iteration #4: Calculate the average
 // Level 1: Array of numbers
 const numbersAvg = [2, 6, 9, 10, 7, 4, 1, 9];
 
+function averageNumbers(array) {
+ /* let sum = 0;
+  
+  array.forEach(function(element,index){
+    sum += element;
+    console.log(sum)
+    i = index;
+  })
+  let average = sum / i;*/
+  let average = sumNumbers(array) / array.length;
+  return average;
+}
+
+console.log(`Average is: ${averageNumbers(numbersAvg)}`)
+
+
 // Level 2: Array of strings
 const wordsArr = ['seat', 'correspond', 'linen', 'motif', 'hole', 'smell', 'smart', 'chaos', 'fuel', 'palace'];
+
+function averageWordLength(array) {
+  let lengthArray = [];
+  array.forEach(function (word,index) {
+    lengthArray[index] = word.length;
+
+
+  })
+  let averageLength = averageNumbers(lengthArray);
+  return averageLength;
+}
+console.log(`average word length is: ${averageWordLength(wordsArr)}`)
+
 
 // Iteration #5: Unique arrays
 const wordsUnique = [

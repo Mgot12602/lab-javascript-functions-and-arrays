@@ -23,8 +23,9 @@ function findLongestWord(array) {
    if (array[longestWordIndex]=== undefined){
     return null;
   }else return array[longestWordIndex];
-  } 
+} 
 
+console.log(findLongestWord(words));
   /*for (let i = 0; i < array.length; i++){
     if (array[i].length > longestWordLength) {
       longestWordLength = array[i].length;
@@ -44,12 +45,14 @@ findLongestWord(words);*/
 
 const numbers = [6, 12, 1, 18, 13, 16, 2, 1, 8, 10];
 
-function SumNumbers(array) {
+function sumNumbers(array) {
+  let sum = 0;
   array.forEach(function (number){
-    
-  })
+    sum +=number;
+  }) 
+  return sum;
 }
-
+console.log(sumNumbers(numbers));
 
 // Iteration #4: Calculate the average
 // Level 1: Array of numbers

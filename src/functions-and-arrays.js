@@ -15,15 +15,17 @@ function findLongestWord(array) {
  
   let longestWordLength = 0;
   let longestWordIndex = 0;
-  /*array.forEach(function (element, index,array) {
+  array.forEach(function (element, index, array) {
     if (element.length > longestWordLength) {
       longestWordLength = element.length;
       longestWordIndex = index;
-    }
-    return array[longestWordIndex];
-  } */
+    }})
+   if (array[longestWordIndex]=== undefined){
+    return null;
+  }else return array[longestWordIndex];
+  } 
 
-  for (let i = 0; i < array.length; i++){
+  /*for (let i = 0; i < array.length; i++){
     if (array[i].length > longestWordLength) {
       longestWordLength = array[i].length;
       longestWordIndex = i;
@@ -35,15 +37,17 @@ function findLongestWord(array) {
 }
 
 
-findLongestWord(words);
+findLongestWord(words);*/
 
 
 // Iteration #3: Calculate the sum
 
 const numbers = [6, 12, 1, 18, 13, 16, 2, 1, 8, 10];
 
-function SumNumbers() {
-  
+function SumNumbers(array) {
+  array.forEach(function (number){
+    
+  })
 }
 
 
